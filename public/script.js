@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Malibu, CA',
       type: 'Luxury Residential Villa',
       desc: 'The Horizon Villa is a private coastal retreat designed to maximize panoramic ocean vistas. Featuring double-height structural glass facades, natural teak panels, and an open layout that flows seamlessly onto an infinity pool deck, it blends architecture with the coastal horizon. Customized bronze detailing and low-profile structural concrete form the foundation of this luxury residence.',
-      img: 'images/project_villas.png'
+      img: 'images/portfolio_project_1.jpg'
     },
     p2: {
       title: 'Synergy Hub',
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Seattle, WA',
       type: 'Corporate Headquarters',
       desc: 'Synergy Hub redefines the modern workplace through human-centric design. This biophilic office interior balances open collaboration zones with acoustically insulated focus pods. Meticulously matched charcoal wood paneling, live foliage columns, and smart indirect LED channels create a workspace environment that inspires cognitive health, productivity, and corporate culture.',
-      img: 'images/project_office.png'
+      img: 'images/portfolio_project_2.jpg'
     },
     p3: {
       title: 'Aura Boutique Hotel',
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Milan, Italy',
       type: 'Boutique Hotel Lobby',
       desc: 'Aura Boutique Hotel lobby acts as a sensory portal. Integrating soft velvet seating in dark, rich charcoal, gold-accented partitions, and custom lighting fixtures, it creates a moody yet comforting hospitality environment. The reception design is characterized by floating slab marble counters and tailored brass profiles that reflect Italian luxury.',
-      img: 'images/project_hospitality.png'
+      img: 'images/portfolio_project_3.jpg'
     },
     p4: {
       title: 'Glasshouse Penthouse',
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Manhattan, NY',
       type: 'Luxury Apartment Penthouse',
       desc: 'Hovering above Manhattan, the Glasshouse Penthouse represents minimalist luxury at its peak. Using rare Statuario marble slabs, automated panel walls, and custom-commissioned metallic furniture units, the design offers spacious luxury. Spatial zoning was optimized to frame dramatic cityscape views from every perspective.',
-      img: 'images/project_villas.png'
+      img: 'images/portfolio_project_4.jpg'
     },
     p5: {
       title: 'Apex Suites',
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Austin, TX',
       type: 'Corporate Executive Suites',
       desc: 'Apex Suites blends corporate prestige with industrial design elements. The layout features polished concrete floors, custom gold-accented privacy screens, and integrated acoustic ceiling systems. The spatial flow supports private executive meetings while keeping work areas open and sun-drenched.',
-      img: 'images/project_office.png'
+      img: 'images/portfolio_project_5.jpg'
     },
     p6: {
       title: 'The Velvet Lounge',
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'London, UK',
       type: 'Premium Cocktail Lounge',
       desc: 'The Velvet Lounge is a premium design intervention of an underground heritage cellar. Retaining historic brick vaults, the design installs luxurious velvet booths, a custom brass back-lit bar counter, and sophisticated gold accents. The space offers a moody, high-end hospitality environment with optimized bar circulation.',
-      img: 'images/project_hospitality.png'
+      img: 'images/portfolio_project_6.jpg'
     }
   };
 
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = input.value.trim();
 
     if (email) {
-      alert(`Thank you for subscribing! We've registered ${email} for HAUS & CO. Weekly Insights.`);
+      alert(`Thank you for subscribing! We've registered ${email} for HUMYNEX STUDIO Weekly Insights.`);
       newsletterForm.reset();
     }
   });

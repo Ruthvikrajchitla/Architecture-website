@@ -8,19 +8,19 @@
 
 /* --- CSS Variables / Design Tokens --- */
 :root {
-  /* Color Palette */
-  --color-charcoal-dark: #0f0f10;
-  --color-charcoal: #18181b;
-  --color-charcoal-light: #27272a;
-  --color-gold: #c5a880;
-  --color-gold-hover: #a3875f;
-  --color-gold-light: rgba(197, 168, 128, 0.15);
-  --color-cream: #faf9f6;
+  /* Color Palette - Matched perfectly to the Burgundy and Rose Gold brand logo */
+  --color-charcoal-dark: #1c050a;
+  --color-charcoal: #2d0a14;
+  --color-charcoal-light: #3e121e;
+  --color-gold: #d89ba6;
+  --color-gold-hover: #b0707c;
+  --color-gold-light: rgba(216, 155, 166, 0.15);
+  --color-cream: #faf5f6;
   --color-white: #ffffff;
-  --color-gray-dark: #3f3f46;
-  --color-gray-medium: #71717a;
-  --color-gray-light: #e4e4e7;
-  --color-gray-bg: #f4f4f5;
+  --color-gray-dark: #4a383c;
+  --color-gray-medium: #7d666b;
+  --color-gray-light: #ebdce0;
+  --color-gray-bg: #f5ecef;
 
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -31,10 +31,10 @@
   --transition-fast: all 0.25s ease;
   
   /* Shadows & Glassmorphism */
-  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.08);
-  --shadow-light: 0 10px 20px rgba(0, 0, 0, 0.03);
-  --glass-bg: rgba(24, 24, 26, 0.85);
-  --glass-border: rgba(197, 168, 128, 0.2);
+  --shadow-premium: 0 20px 40px rgba(28, 5, 10, 0.08);
+  --shadow-light: 0 10px 20px rgba(28, 5, 10, 0.03);
+  --glass-bg: rgba(28, 5, 10, 0.85);
+  --glass-border: rgba(216, 155, 166, 0.2);
   --glass-blur: blur(12px);
 
   /* Spacing */
@@ -291,47 +291,30 @@ a {
   gap: 1.2rem;
 }
 
+.logo-img {
+  height: 70px;
+  width: auto;
+  border: 1.5px solid rgba(216, 155, 166, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: var(--transition-smooth);
+}
+
+.header.scrolled .logo-img {
+  height: 55px;
+  border-color: rgba(216, 155, 166, 0.8);
+}
+
+.footer-logo-img {
+  height: 90px;
+  border: 2px solid rgba(216, 155, 166, 0.4);
+}
+
 .logo-icon {
-  font-family: var(--font-serif);
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0px;
+  display: none;
 }
 
 .logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-main {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--color-white);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.header.scrolled .logo-main {
-  color: var(--color-white);
-}
-
-.logo-sub {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  letter-spacing: 0.35em;
-  color: var(--color-gold);
-  text-transform: uppercase;
-  line-height: 1;
-  margin-top: 4px;
+  display: none;
 }
 
 .nav-menu {
@@ -421,7 +404,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/hero_bg.png');
+  background-image: url('images/hero_bg.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -1964,9 +1947,31 @@ select.form-input:focus, select.form-input:not([value=""]):valid {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --section-padding: var(--section-padding-mobile);
+  }
+
   /* Mobile Header Navigation */
   .nav-toggle {
     display: flex;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav-container {
+    height: 70px;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .header.scrolled .nav-container {
+    height: 60px;
+  }
+
+  .header.scrolled .logo-img {
+    height: 42px;
   }
 
   .nav-menu {
@@ -2001,16 +2006,59 @@ select.form-input:focus, select.form-input:not([value=""]):valid {
   }
 
   .hero-title {
-    font-size: 4.8rem;
+    font-size: 4.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .hero-actions {
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Philosophy Section Responsive Scaling */
+  .philosophy-image img {
+    height: 350px;
+  }
+
+  .philosophy-image::after {
+    top: 2rem;
+    left: -1.5rem;
+  }
+
+  .philosophy-pillars {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .portfolio-grid, .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Studio Section Responsive Scaling */
+  .studio-image-wrapper img {
+    height: 350px;
+  }
+
+  .studio-experience-badge {
+    padding: 2.2rem;
+    bottom: -2rem;
+    right: 1.5rem;
+  }
+
+  .studio-stats {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 3rem;
   }
 
   .timeline {
@@ -2056,6 +2104,11 @@ select.form-input:focus, select.form-input:not([value=""]):valid {
     padding: 3rem;
   }
 
+  /* Map Panel Scaling */
+  .contact-map-panel {
+    height: 380px;
+  }
+
   .form-group-row {
     grid-template-columns: 1fr;
     gap: 0;
@@ -2073,5 +2126,19 @@ select.form-input:focus, select.form-input:not([value=""]):valid {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+  }
+
+  /* WhatsApp Widget Mobile Fit */
+  .whatsapp-widget {
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  }
+
+  .whatsapp-widget svg {
+    width: 26px;
+    height: 26px;
   }
 }

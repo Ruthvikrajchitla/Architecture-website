@@ -149,11 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('project-modal');
   const modalClose = document.getElementById('modal-close');
   const modalImg = document.getElementById('modal-img-src');
-  const modalCat = document.getElementById('modal-cat-text');
-  const modalTitle = document.getElementById('modal-title-text');
-  const modalLoc = document.getElementById('modal-loc-text');
-  const modalType = document.getElementById('modal-type-text');
-  const modalDesc = document.getElementById('modal-desc-text');
 
   portfolioItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -164,11 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Populate modal details
         modalImg.src = data.img;
         modalImg.alt = data.title;
-        modalCat.textContent = data.category;
-        modalTitle.textContent = data.title;
-        modalLoc.textContent = data.location;
-        modalType.textContent = data.type;
-        modalDesc.textContent = data.desc;
 
         // Open modal
         modal.classList.add('active');
@@ -190,45 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ==========================================
-     6. STUDIO COUNTERS SCROLL ANIMATION
-     ========================================== */
-  const statsSection = document.querySelector('.studio');
-  const statNumbers = document.querySelectorAll('.stat-number');
-  let countersStarted = false;
 
-  function runCounters() {
-    statNumbers.forEach(stat => {
-      const target = parseInt(stat.getAttribute('data-target'), 10);
-      const suffix = target === 150 ? '+' : target === 18 ? '+' : '+';
-      let count = 0;
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // ~60fps
-
-      const timer = setInterval(() => {
-        count += increment;
-        if (count >= target) {
-          stat.textContent = target + suffix;
-          clearInterval(timer);
-        } else {
-          stat.textContent = Math.floor(count) + suffix;
-        }
-      }, 16);
-    });
-  }
-
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !countersStarted) {
-        countersStarted = true;
-        runCounters();
-      }
-    });
-  }, { threshold: 0.3 });
-
-  if (statsSection) {
-    statsObserver.observe(statsSection);
-  }
 
 
   /* ==========================================
@@ -263,80 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateTimeline(0);
 
 
-  /* ==========================================
-     8. CLIENT TESTIMONIALS SLIDER
-     ========================================== */
-  const track = document.getElementById('testimonials-track');
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const prevBtn = document.getElementById('prev-slide');
-  const nextBtn = document.getElementById('next-slide');
-  const dotsContainer = document.getElementById('slider-dots');
-  
-  let currentSlideIndex = 0;
-  const slideCount = slides.length;
-  let autoPlayTimer;
 
-  // Create dots
-  slides.forEach((_, idx) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (idx === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(idx));
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll('.dot');
-
-  function updateSlider() {
-    track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-    
-    // Update dots
-    dots.forEach((dot, idx) => {
-      if (idx === currentSlideIndex) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
-    });
-  }
-
-  function goToSlide(index) {
-    currentSlideIndex = index;
-    updateSlider();
-    resetAutoPlay();
-  }
-
-  function nextSlide() {
-    currentSlideIndex = (currentSlideIndex + 1) % slideCount;
-    updateSlider();
-  }
-
-  function prevSlide() {
-    currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
-    updateSlider();
-  }
-
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoPlay();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoPlay();
-  });
-
-  // Auto-play timer
-  function startAutoPlay() {
-    autoPlayTimer = setInterval(nextSlide, 6000); // every 6s
-  }
-
-  function resetAutoPlay() {
-    clearInterval(autoPlayTimer);
-    startAutoPlay();
-  }
-
-  startAutoPlay();
 
 
   /* ==========================================

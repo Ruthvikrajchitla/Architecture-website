@@ -129,10 +129,8 @@
 
       <!-- Portfolio Category Filters -->
       <ul class="portfolio-filters reveal">
-        <li><button class="filter-btn active" data-filter="all">All Projects</button></li>
-        <li><button class="filter-btn" data-filter="residential">Residential</button></li>
-        <li><button class="filter-btn" data-filter="corporate">Corporate Office</button></li>
-        <li><button class="filter-btn" data-filter="hospitality">Hospitality</button></li>
+        <li><button class="filter-btn active" data-filter="residential">Residential</button></li>
+        <li><button class="filter-btn" data-filter="commercial">Commercial</button></li>
       </ul>
 
       <!-- Portfolio Grid -->
@@ -148,7 +146,7 @@
             <span class="portfolio-category">Residential Architecture</span>
             <h3 class="portfolio-title">The Horizon Villa</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -157,16 +155,16 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="portfolio-item" data-category="corporate" data-project-id="p2">
+        <div class="portfolio-item hidden" data-category="commercial" data-project-id="p2">
           <div class="portfolio-image-wrapper">
             <img src="images/portfolio_project_2.jpg" alt="Synergy Corporate Office Hub">
           </div>
           <div class="portfolio-overlay"></div>
           <div class="portfolio-info">
-            <span class="portfolio-category">Office Interiors</span>
+            <span class="portfolio-category">Commercial Interior</span>
             <h3 class="portfolio-title">Synergy Hub</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -175,16 +173,16 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="portfolio-item" data-category="hospitality" data-project-id="p3">
+        <div class="portfolio-item hidden" data-category="commercial" data-project-id="p3">
           <div class="portfolio-image-wrapper">
             <img src="images/portfolio_project_3.jpg" alt="Aura Boutique Hotel Lobby">
           </div>
           <div class="portfolio-overlay"></div>
           <div class="portfolio-info">
-            <span class="portfolio-category">Hospitality Project</span>
+            <span class="portfolio-category">Commercial Architecture</span>
             <h3 class="portfolio-title">Aura Boutique Hotel</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -202,7 +200,7 @@
             <span class="portfolio-category">Luxury Apartment</span>
             <h3 class="portfolio-title">Glasshouse Penthouse</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -211,16 +209,16 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="portfolio-item" data-category="corporate" data-project-id="p5">
+        <div class="portfolio-item hidden" data-category="commercial" data-project-id="p5">
           <div class="portfolio-image-wrapper">
             <img src="images/portfolio_project_5.jpg" alt="Apex Corporate Suites">
           </div>
           <div class="portfolio-overlay"></div>
           <div class="portfolio-info">
-            <span class="portfolio-category">Corporate Workspace</span>
+            <span class="portfolio-category">Commercial Workspace</span>
             <h3 class="portfolio-title">Apex Suites</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -229,16 +227,16 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="portfolio-item" data-category="hospitality" data-project-id="p6">
+        <div class="portfolio-item hidden" data-category="commercial" data-project-id="p6">
           <div class="portfolio-image-wrapper">
             <img src="images/portfolio_project_6.jpg" alt="The Velvet Lounge Bar">
           </div>
           <div class="portfolio-overlay"></div>
           <div class="portfolio-info">
-            <span class="portfolio-category">Retail & Remodeling</span>
+            <span class="portfolio-category">Commercial Remodeling</span>
             <h3 class="portfolio-title">The Velvet Lounge</h3>
             <div class="portfolio-details-btn">
-              View Case Study 
+              View Design 
               <svg viewBox="0 0 24 24" width="16" height="16">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -257,30 +255,6 @@
       <div class="modal-image">
         <img src="images/portfolio_project_1.jpg" id="modal-img-src" alt="Project Detail">
       </div>
-      <div class="modal-info">
-        <span class="modal-category" id="modal-cat-text">Category</span>
-        <h3 class="modal-title" id="modal-title-text">Project Title</h3>
-        
-        <div class="modal-meta-grid">
-          <div class="meta-item">
-            <span class="meta-label">Location</span>
-            <span class="meta-value" id="modal-loc-text">Malibu, CA</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Project Type</span>
-            <span class="meta-value" id="modal-type-text">Luxury Villa</span>
-          </div>
-        </div>
-
-        <h4 class="modal-desc-title">Design Concept</h4>
-        <p class="modal-desc" id="modal-desc-text">
-          Detailed description of the design concept...
-        </p>
-
-        <div class="modal-actions">
-          <a href="#consultation" class="btn btn-gold" id="modal-cta-btn">Enquire About Similar Project</a>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -298,29 +272,9 @@
           <p class="studio-desc">
             Our team consists of passionate architects, interior stylists, space planners, and visualizers who collaborate to deliver fully execution-ready blueprints and bespoke turnkey transformations.
           </p>
-          
-          <!-- Animated Stats counters -->
-          <div class="studio-stats">
-            <div class="stat-item">
-              <div class="stat-number" data-target="150">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="18">0</div>
-              <div class="stat-label">Awards Won</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="15">0</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-          </div>
         </div>
         <div class="studio-image-wrapper reveal-right">
           <img src="images/studio_team_work.jpg" alt="HUMYNEX STUDIO Architecture studio and design office">
-          <div class="studio-experience-badge">
-            <span class="studio-experience-num">15+</span>
-            <span class="studio-experience-lbl">Years of<br>Excellence</span>
-          </div>
         </div>
       </div>
     </div>
@@ -471,74 +425,7 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Testimonials</span>
-        <h2 class="section-title">What Our Clients Say</h2>
-      </div>
 
-      <div class="testimonials-slider reveal">
-        <div class="testimonials-track" id="testimonials-track">
-          
-          <!-- Slide 1 -->
-          <div class="testimonial-slide">
-            <span class="quote-icon">“</span>
-            <blockquote class="testimonial-text">
-              "Working with HUMYNEX STUDIO was an absolute pleasure. Elena and her team transformed our seaside property in Malibu into an architectural masterpiece. The flow of natural light and material selections are exceptional."
-            </blockquote>
-            <div class="client-info">
-              <span class="client-name">Victoria & Alexander Mercer</span>
-              <span class="client-project">The Horizon Villa, Malibu</span>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="testimonial-slide">
-            <span class="quote-icon">“</span>
-            <blockquote class="testimonial-text">
-              "Our office productivity and team morale has shot up dramatically since moving into the new space designed by HUMYNEX STUDIO. The biophilic elements and acoustics are incredibly planned. Absolutely recommended for corporate projects!"
-            </blockquote>
-            <div class="client-info">
-              <span class="client-name">Marcus Vance</span>
-              <span class="client-project">CEO, Synergy Tech Group</span>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="testimonial-slide">
-            <span class="quote-icon">“</span>
-            <blockquote class="testimonial-text">
-              "We wanted our boutique hotel lobby to project a moody, luxury atmosphere that was both comforting and highly sophisticated. The design execution and custom gold-brass details exceeded all our expectations."
-            </blockquote>
-            <div class="client-info">
-              <span class="client-name">Chiara Bertolini</span>
-              <span class="client-project">Director, Aura Boutique Hotel, Milan</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Slider Controls -->
-        <div class="slider-controls">
-          <button class="slider-btn" id="prev-slide" aria-label="Previous Slide">
-            <svg viewBox="0 0 24 24" width="20" height="20">
-              <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="slider-dots" id="slider-dots">
-            <!-- Dynamic dots inserted here -->
-          </div>
-          <button class="slider-btn" id="next-slide" aria-label="Next Slide">
-            <svg viewBox="0 0 24 24" width="20" height="20">
-              <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Lead Capture Section -->
   <section class="consultation" id="consultation">
@@ -672,7 +559,7 @@
             </div>
             <div>
               <h5>Studio Address</h5>
-              <p>500 Park Avenue, 18th Floor<br>New York, NY 10022</p>
+              <p>Vizag, Andhra Pradesh</p>
             </div>
           </div>
 
@@ -714,8 +601,8 @@
               <div class="marker-shadow"></div>
             </div>
             <div class="map-info-box">
-              <h6>HUMYNEX STUDIO HEADQUARTERS</h6>
-              <p>500 Park Avenue, New York, NY</p>
+              <h6>HUMYNEX STUDIO</h6>
+              <p>Vizag, Andhra Pradesh</p>
             </div>
           </div>
         </div>

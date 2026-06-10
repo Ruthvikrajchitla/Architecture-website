@@ -95,70 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================
      5. PROJECT DETAIL MODAL POPUP
      ========================================== */
-  const projectDetails = {
-    p1: {
-      title: 'The Horizon Villa',
-      category: 'Residential Architecture',
-      location: 'Malibu, CA',
-      type: 'Luxury Residential Villa',
-      desc: 'The Horizon Villa is a private coastal retreat designed to maximize panoramic ocean vistas. Featuring double-height structural glass facades, natural teak panels, and an open layout that flows seamlessly onto an infinity pool deck, it blends architecture with the coastal horizon. Customized bronze detailing and low-profile structural concrete form the foundation of this luxury residence.',
-      img: 'images/portfolio_project_1.jpg'
-    },
-    p2: {
-      title: 'Synergy Hub',
-      category: 'Office Interiors',
-      location: 'Seattle, WA',
-      type: 'Corporate Headquarters',
-      desc: 'Synergy Hub redefines the modern workplace through human-centric design. This biophilic office interior balances open collaboration zones with acoustically insulated focus pods. Meticulously matched charcoal wood paneling, live foliage columns, and smart indirect LED channels create a workspace environment that inspires cognitive health, productivity, and corporate culture.',
-      img: 'images/portfolio_project_2.jpg'
-    },
-    p3: {
-      title: 'Aura Boutique Hotel',
-      category: 'Hospitality Project',
-      location: 'Milan, Italy',
-      type: 'Boutique Hotel Lobby',
-      desc: 'Aura Boutique Hotel lobby acts as a sensory portal. Integrating soft velvet seating in dark, rich charcoal, gold-accented partitions, and custom lighting fixtures, it creates a moody yet comforting hospitality environment. The reception design is characterized by floating slab marble counters and tailored brass profiles that reflect Italian luxury.',
-      img: 'images/portfolio_project_3.jpg'
-    },
-    p4: {
-      title: 'Glasshouse Penthouse',
-      category: 'Luxury Apartment',
-      location: 'Manhattan, NY',
-      type: 'Luxury Apartment Penthouse',
-      desc: 'Hovering above Manhattan, the Glasshouse Penthouse represents minimalist luxury at its peak. Using rare Statuario marble slabs, automated panel walls, and custom-commissioned metallic furniture units, the design offers spacious luxury. Spatial zoning was optimized to frame dramatic cityscape views from every perspective.',
-      img: 'images/portfolio_project_4.jpg'
-    },
-    p5: {
-      title: 'Apex Suites',
-      category: 'Corporate Workspace',
-      location: 'Austin, TX',
-      type: 'Corporate Executive Suites',
-      desc: 'Apex Suites blends corporate prestige with industrial design elements. The layout features polished concrete floors, custom gold-accented privacy screens, and integrated acoustic ceiling systems. The spatial flow supports private executive meetings while keeping work areas open and sun-drenched.',
-      img: 'images/portfolio_project_5.jpg'
-    },
-    p6: {
-      title: 'The Velvet Lounge',
-      category: 'Retail & Remodeling',
-      location: 'London, UK',
-      type: 'Premium Cocktail Lounge',
-      desc: 'The Velvet Lounge is a premium design intervention of an underground heritage cellar. Retaining historic brick vaults, the design installs luxurious velvet booths, a custom brass back-lit bar counter, and sophisticated gold accents. The space offers a moody, high-end hospitality environment with optimized bar circulation.',
-      img: 'images/portfolio_project_6.jpg'
-    }
-  };
-
   const modal = document.getElementById('project-modal');
   const modalClose = document.getElementById('modal-close');
   const modalImg = document.getElementById('modal-img-src');
 
   portfolioItems.forEach(item => {
     item.addEventListener('click', () => {
-      const id = item.getAttribute('data-project-id');
-      const data = projectDetails[id];
-
-      if (data) {
-        // Populate modal details
-        modalImg.src = data.img;
-        modalImg.alt = data.title;
+      const imgEl = item.querySelector('.portfolio-image-wrapper img');
+      if (imgEl) {
+        // Populate modal details directly from the DOM image
+        modalImg.src = imgEl.src;
+        modalImg.alt = imgEl.alt || 'Project Design';
 
         // Open modal
         modal.classList.add('active');

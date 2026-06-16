@@ -205,6 +205,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Success response simulation
     formAlert.classList.add('success');
+
+    // Build structured WhatsApp message
+    let whatsappMessage = `Hi HUMYNEX STUDIO,
+
+I would like to request a free consultation. Here are my details:
+* Name: ${name}
+* Email: ${email}
+* Mobile: ${mobile}
+* Project Type: ${projectType}
+* Location: ${location}
+* Budget: ${budget}`;
+
+    if (message) {
+      whatsappMessage += `\n\nProject Vision:\n${message}`;
+    }
+
+    const whatsappUrl = `https://wa.me/917660937710?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in a new tab with fallback if popup blocker triggers
+    try {
+      const newWindow = window.open(whatsappUrl, '_blank');
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        window.location.href = whatsappUrl;
+      }
+    } catch (err) {
+      window.location.href = whatsappUrl;
+    }
+
     form.reset();
 
     // Scroll to alert
